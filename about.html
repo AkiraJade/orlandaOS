@@ -13,28 +13,69 @@
     <link rel="stylesheet" href="./layouts/style.css">
     <style>
         .about-container {
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 8px;
+            background: rgba(45, 45, 45, 0.8);
+            padding: 3rem;
+            border-radius: 20px;
             max-width: 1200px;
-            margin: 40px auto;
-            border: 1px solid var(--border-color);
+            margin: 3rem auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-1);
         }
 
         .profile-sketch {
             max-width: 100%;
             height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-sketch:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 25px 50px rgba(155, 89, 182, 0.3);
+            border-color: var(--accent-color);
         }
 
         .social-icons a {
-            margin-right: 15px;
-            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            font-size: 1.75rem;
             color: var(--text-muted);
-            transition: color 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .social-icons a:hover {
-            color: var(--accent-color);
+            color: var(--text-color);
+            background: var(--gradient-1);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 16px rgba(155, 89, 182, 0.3);
+        }
+
+        .social-icons {
+            margin-top: 2rem;
         }
     </style>
 </head>
