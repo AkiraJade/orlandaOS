@@ -21,10 +21,13 @@ body {
     line-height: 1.6;
     letter-spacing: 0.01em;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(155, 89, 182, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(142, 68, 173, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(165, 105, 189, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(155, 89, 182, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(142, 68, 173, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(165, 105, 189, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(155, 89, 182, 0.03) 0%, rgba(142, 68, 173, 0.05) 100%);
     background-attachment: fixed;
+    background-size: cover, cover;
+    min-height: 100vh;
 }
 
 .main-title {
