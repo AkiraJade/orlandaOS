@@ -401,3 +401,15 @@ html {
     background-size: 1000px 100%;
     animation: shimmer 2s infinite;
 }
+
+/* Footer - dark theme */
+footer.bg-dark {
+    background-color: var(--bg-secondary) !important;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+footer.bg-dark .text-white,
+footer.bg-dark small {
+    color: var(--text-muted) !important;
+}
