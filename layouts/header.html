@@ -11,6 +11,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./layouts/style.css">
+    <script>
+        // Fix navigation paths based on current directory depth
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const depth = currentPath.split('/').length - 1; // Count directory levels
+            let prefix = '';
+            
+            // Calculate the correct prefix based on directory depth
+            if (depth > 1) {
+                prefix = '../'.repeat(depth - 1);
+            }
+            
+            // Update all navigation links
+            const links = document.querySelectorAll('nav a[href]');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith(prefix)) {
+                    link.setAttribute('href', prefix + href);
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
