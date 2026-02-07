@@ -10,20 +10,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/layouts/style.css">
-    <script>
-        // Use absolute paths from root to avoid path doubling issues
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('nav a[href]');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && !href.startsWith('http') && !href.startsWith('#')) {
-                    // Convert relative paths to absolute paths from root
-                    link.setAttribute('href', '/' + href);
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="./layouts/style.css">
 </head>
 
 <body>
