@@ -11,28 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./layouts/style.css">
-    <script>
-        // Fix navigation paths based on current directory depth
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPath = window.location.pathname;
-            const depth = currentPath.split('/').length - 1; // Count directory levels
-            let prefix = '';
-            
-            // Calculate the correct prefix based on directory depth
-            if (depth > 1) {
-                prefix = '../'.repeat(depth - 1);
-            }
-            
-            // Update all navigation links
-            const links = document.querySelectorAll('nav a[href]');
-            links.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith(prefix)) {
-                    link.setAttribute('href', prefix + href);
-                }
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -52,7 +30,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active text-uppercase" href="index.html">HOME</a>
+                            <a class="nav-link active text-uppercase" href="/orlandaOS/index.html">HOME</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button"
@@ -60,18 +38,18 @@
                                 LABORATORY ACTIVITIES
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="laboratory/active_directory.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/active_directory.html"><i
                                             class="bi bi-people-fill me-2"></i>Active Directory: Creating Users</a></li>
-                                <li><a class="dropdown-item" href="laboratory/dhcp.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/dhcp.html"><i
                                             class="bi bi-pc-display me-2"></i>DHCP Role and Joining Workstations in
                                         Domain</a></li>
-                                <li><a class="dropdown-item" href="laboratory/web_server.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/web_server.html"><i
                                             class="bi bi-browser-edge me-2"></i>Application and Web Server</a></li>
-                                <li><a class="dropdown-item" href="laboratory/raid.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/raid.html"><i
                                             class="bi bi-floppy2 me-2"></i>RAID Installation</a></li>
-                                <li><a class="dropdown-item" href="laboratory/group_policy.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/group_policy.html"><i
                                             class="bi bi-collection-fill me-2"></i>Group Policy Management</a></li>
-                                <li><a class="dropdown-item" href="laboratory/file_server.html"><i
+                                <li><a class="dropdown-item" href="/orlandaOS/laboratory/file_server.html"><i
                                             class="bi bi-files me-2"></i>File Server</a></li>
                             </ul>
                         </li>
@@ -81,31 +59,31 @@
                                 WINDOWS INSTALLATION
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="windows/win95.html"><i class="bi bi-windows me-2"></i>Windows 95</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win95.html"><i class="bi bi-windows me-2"></i>Windows 95</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/win98.html"><i class="bi bi-windows me-2"></i>Windows 98</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win98.html"><i class="bi bi-windows me-2"></i>Windows 98</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/winNT.html"><i class="bi bi-windows me-2"></i>Windows NT</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winNT.html"><i class="bi bi-windows me-2"></i>Windows NT</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/win2000.html"><i class="bi bi-windows me-2"></i>Windows 2000</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win2000.html"><i class="bi bi-windows me-2"></i>Windows 2000</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/winME.html"><i class="bi bi-windows me-2"></i>Windows ME</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winME.html"><i class="bi bi-windows me-2"></i>Windows ME</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/winXP.html"><i class="bi bi-windows me-2"></i>Windows XP</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winXP.html"><i class="bi bi-windows me-2"></i>Windows XP</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/winserver2003.html"><i class="bi bi-server me-2"></i>Windows Server
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winserver2003.html"><i class="bi bi-server me-2"></i>Windows Server
                                         2003</a></li>
-                                <li><a class="dropdown-item" href="windows/winVista.html"><i class="bi bi-windows me-2"></i>Windows
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winVista.html"><i class="bi bi-windows me-2"></i>Windows
                                         Vista</a></li>
-                                <li><a class="dropdown-item" href="windows/winserver2008.html"><i class="bi bi-server me-2"></i>Windows Server
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/winserver2008.html"><i class="bi bi-server me-2"></i>Windows Server
                                         2008</a></li>
-                                <li><a class="dropdown-item" href="windows/win7.html"><i class="bi bi-windows me-2"></i>Windows 7</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win7.html"><i class="bi bi-windows me-2"></i>Windows 7</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/win8.html"><i class="bi bi-windows me-2"></i>Windows 8</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win8.html"><i class="bi bi-windows me-2"></i>Windows 8</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/win10.html"><i class="bi bi-windows me-2"></i>Windows 10</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win10.html"><i class="bi bi-windows me-2"></i>Windows 10</a>
                                 </li>
-                                <li><a class="dropdown-item" href="windows/win11.html"><i class="bi bi-windows me-2"></i>Windows 11</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/windows/win11.html"><i class="bi bi-windows me-2"></i>Windows 11</a>
                                 </li>
                             </ul>
                         </li>
@@ -115,28 +93,28 @@
                                 FINALS: TUP-TAGUIG DOMAIN
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="finals/part1.html"><i class="bi bi-globe me-2"></i>Part 1: Domain
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part1.html"><i class="bi bi-globe me-2"></i>Part 1: Domain
                                         Controller</a></li>
-                                <li><a class="dropdown-item" href="finals/part2.html"><i class="bi bi-people-fill me-2"></i>Part 2:
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part2.html"><i class="bi bi-people-fill me-2"></i>Part 2:
                                         Adding Users</a></li>
-                                <li><a class="dropdown-item" href="finals/part3.html"><i class="bi bi-server me-2"></i>Part 3: DHCP
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part3.html"><i class="bi bi-server me-2"></i>Part 3: DHCP
                                         Server</a></li>
-                                <li><a class="dropdown-item" href="finals/part4.html"><i class="bi bi-files me-2"></i>Part 4: File
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part4.html"><i class="bi bi-files me-2"></i>Part 4: File
                                         Sharing</a></li>
-                                <li><a class="dropdown-item" href="finals/part5.html"><i class="bi bi-floppy2 me-2"></i>Part 5: RAID</a>
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part5.html"><i class="bi bi-floppy2 me-2"></i>Part 5: RAID</a>
                                 </li>
-                                <li><a class="dropdown-item" href="finals/part6.html"><i class="bi bi-window-stack me-2"></i>Part 6:
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part6.html"><i class="bi bi-window-stack me-2"></i>Part 6:
                                         Remote Desktop</a></li>
-                                <li><a class="dropdown-item" href="finals/part7.html"><i class="bi bi-globe2 me-2"></i>Part 7: Web
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part7.html"><i class="bi bi-globe2 me-2"></i>Part 7: Web
                                         Server</a></li>
-                                <li><a class="dropdown-item" href="finals/part8.html"><i class="bi bi-person-gear me-2"></i>Part 8:
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part8.html"><i class="bi bi-person-gear me-2"></i>Part 8:
                                         Group Policies</a></li>
-                                <li><a class="dropdown-item" href="finals/part9.html"><i class="bi bi-window-stack me-2"></i>Part 9:
+                                <li><a class="dropdown-item" href="/orlandaOS/finals/part9.html"><i class="bi bi-window-stack me-2"></i>Part 9:
                                         Windows Deployment</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="about.html">ABOUT</a>
+                            <a class="nav-link text-uppercase" href="/orlandaOS/about.html">ABOUT</a>
                         </li>
                     </ul>
                 </div>
