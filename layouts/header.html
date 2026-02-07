@@ -10,33 +10,16 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./layouts/style.css">
+    <link rel="stylesheet" href="/layouts/style.css">
     <script>
-        // Get the base URL dynamically based on current page location
-        function getBasePath() {
-            const path = window.location.pathname;
-            
-            // Check if we're in a subdirectory
-            if (path.includes('/laboratory/')) {
-                return '../';
-            } else if (path.includes('/windows/')) {
-                return '../';
-            } else if (path.includes('/finals/')) {
-                return '../';
-            } else if (path.includes('/layouts/')) {
-                return '../';
-            }
-            return '';
-        }
-        
-        // Update all navigation links on page load
+        // Use absolute paths from root to avoid path doubling issues
         document.addEventListener('DOMContentLoaded', function() {
-            const basePath = getBasePath();
             const links = document.querySelectorAll('nav a[href]');
             links.forEach(link => {
                 const href = link.getAttribute('href');
                 if (href && !href.startsWith('http') && !href.startsWith('#')) {
-                    link.setAttribute('href', basePath + href);
+                    // Convert relative paths to absolute paths from root
+                    link.setAttribute('href', '/' + href);
                 }
             });
         });
