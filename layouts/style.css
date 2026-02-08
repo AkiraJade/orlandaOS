@@ -52,13 +52,20 @@ body {
 /* Keep header (and nav dropdowns) above main content */
 #header {
     position: relative;
-    z-index: 1050;
+    z-index: 1100;
+}
+
+/* Main content must sit below header/nav so dropdowns overlay correctly */
+main,
+.about-container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Navigation customization */
 .navbar {
     position: relative;
-    z-index: 1050;
+    z-index: 1100;
     padding: 1.5rem 0;
     background: rgba(26, 26, 26, 0.8);
     backdrop-filter: blur(20px);
@@ -90,7 +97,7 @@ body {
 
 /* Dropdown customization */
 .dropdown-menu {
-    z-index: 1060;
+    z-index: 1110;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-card);
     margin-top: 0.75rem;
